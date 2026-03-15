@@ -1,0 +1,39 @@
+.confetti-header {
+  position: relative;
+  top:0;
+  z-index: 50;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 15px 14px;
+  overflow: hidden;
+}
+
+.confetti-title {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  font-size: semibold;
+  font-style: 'Be Vietnam Pro', sans-serif;
+  color: var(--confetti-text);
+  text-align: center;
+  z-index: -1;
+  margin-top: -5px;
+}
+
+@media (max-width: 900px) {
+  .confetti-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 16px 20px;
+  }
+
+  .confetti-title {
+    font-size: 14px;
+  }
+}
+
+.confetti-header canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}

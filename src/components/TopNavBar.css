@@ -1,0 +1,144 @@
+.top-nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 40px;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  padding: 14px 24px 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 9.6px;
+}
+
+.logo-icon {
+  width: 32.47px;
+  height: 24px;
+}
+
+.logo {
+  font-family: 'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.logo-pass {
+  font-family: 'Sarabun', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #8D6500;
+}
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding-right: 50px;
+  min-width: 0;
+}
+
+.icon-button {
+  border: none;
+  background: var(--icon-bg);
+  border-radius: 9999px;
+  width: 66px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--header-text);
+  transition: background 0.2s ease;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-style: medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.bell-button {
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--icon-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-bg);
+}
+
+.bell-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--bell-fill);
+}
+
+.icon-button:hover {
+  background: var(--icon-hover);
+}
+
+.top-nav-bar .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none !important;
+}
+
+@media (max-width: 900px) {
+  .top-nav-bar {
+    display: none;
+  }
+
+  .nav-left {
+    gap: 12px;
+  }
+
+  .nav-left .back-label {
+    display: none;
+  }
+
+  .nav-left .divider,
+  .nav-left .day-info {
+    display: none;
+  }
+
+  .nav-center {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-right .title {
+    display: none;
+  }
+
+  .nav-right .icon-button:nth-child(2),
+  .nav-right .icon-button:nth-child(3),
+  .nav-right .avatar {
+    display: none;
+  }
+
+  .icon-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}

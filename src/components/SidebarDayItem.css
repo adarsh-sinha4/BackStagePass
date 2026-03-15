@@ -1,0 +1,92 @@
+.sidebar-day-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px 0 0 999px;
+  color: var(--sidebar-day-inactive-text);
+  font-weight: 500;
+  font-size: 16px;
+  font-style: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 24px;
+  letter-spacing: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.sidebar-day-item:hover:not(.active) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.sidebar-day-label {
+  font-size: 16px;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-style: medium;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: var(--sidebar-day-inactive-text);
+}
+
+.sidebar-day-item.active {
+  background-color: var(--sidebar-day-active-bg);
+  .sidebar-day-label {
+    color: var(--sidebar-day-active-text);
+  }
+  color: var(--sidebar-day-active-text);
+  box-shadow: 0 4px 16px var(--shadow);
+  --r: 15px; /* control the radius */
+  border-block: var(--r) solid #0000;
+  mask: 
+    radial-gradient(var(--r) at 0 var(--r),#0000 98%,#000 101%)
+      100% calc(-1*var(--r))/var(--r) 100% repeat-y,
+    conic-gradient(#000 0 0) padding-box;
+  background: var(--sidebar-day-active-bg) border-box; /* border-box is needed for a gradient coloration */
+  width: 238px;
+  position: relative;
+
+}
+
+
+.sidebar-day-item.locked {
+  color: var(--sidebar-day-locked-text);
+  cursor: pointer;
+}
+
+.tick-icon {
+  width: 16px;
+  height: 16px;
+  stroke: rgba(48, 164, 108, 1) !important;
+  stroke-width: 5px !important;
+  margin-top: 8px;
+}
+
+.tick-icon.active {
+  margin-left: -30px;
+}
+
+.lock-icon.active {
+  margin-left: -30px;
+}
+
+.lock-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+  stroke: var(--lock-strokecolor) !important;
+  stroke-width: var(--lock-strokewidth) !important;
+}
+
+
+.sidebar-day-icon {
+  font-size: 14px;
+}
+
+.sidebar-day-item:not(.active):not(.locked) {
+  filter: brightness(0.94) blur(0.3px);
+  opacity: 0.85;
+}

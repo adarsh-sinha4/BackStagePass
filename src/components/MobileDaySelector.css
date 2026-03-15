@@ -1,0 +1,181 @@
+.mobile-day-selector {
+  display: flex;
+  width: calc(100% - 40px);
+  flex-direction: column;
+  background: linear-gradient(180deg, var(--overlay-initial) 30%, var(--overlay-end) 100%);
+  padding: 16px 20px 0;
+  border-bottom: 1px solid var(--border);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  height: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+}
+
+
+.mobile-day-selector::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/png/background.png') center/cover no-repeat;
+  filter: blur(50px);
+}
+
+.mobile-day-selector > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  z-index: 1000;
+}
+
+.left-section-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.back-arrow-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-button-mobile {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--mobile-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.back-arrow-icon-mobile {
+  width: 24px;
+  height: 24px;
+  stroke: var(--bell-fill) !important;
+  stroke-width: 3px !important;
+}
+
+.days-mobile {
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-style: semi-bold;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.04%;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.right-section-mobile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lock {
+  width: 24px;
+  height: 24px;
+  stroke: var(--lock-strokecolor) !important;
+  stroke-width: var(--lock-strokewidth) !important;
+}
+
+.info-mobile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--mobile-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.info-icon-mobile {
+  width: 20px;
+  height: 20px;
+  stroke: var(--bell-fill) !important;
+  stroke-width: 2px !important;
+}
+
+@media (width > 900px) {
+  .mobile-day-selector {
+    display: none;
+  }
+}
+
+.selector-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.selector-container::-webkit-scrollbar {
+  display: none;
+}
+
+.day-pill {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sidebar-day-inactive-text);
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 80px;
+  justify-content: center;
+}
+
+.day-pill.active {
+  background-color: var(--sidebar-day-active-bg);
+  color: var(--sidebar-day-active-text);
+  --r: 25px; /* control the radius */
+
+  line-height: 1.8; /* control the height */
+  padding-inline: .5em;
+  border-inline: var(--r) solid #0000;
+  border-radius: calc(2*var(--r)) calc(2*var(--r)) 0 0/var(--r);
+  mask: 
+    radial-gradient(var(--r) at var(--r) 0,#0000 98%,#000 101%)
+      calc(-1*var(--r)) 100%/100% var(--r) repeat-x,
+    conic-gradient(#000 0 0) padding-box;
+  background: var(--sidebar-day-active-bg) border-box; /* border-box is needed for a gradient coloration */
+  width: fit-content;
+}
+
+.day-pill.locked {
+  color: var(--sidebar-day-locked-text);
+}
+
+.day-pill.completed {
+  color: var(--accent-green);
+}
+
+.day-pill.locked .lock {
+  opacity: 0.7;
+}
+
+.day-number {
+  font-size: 14px;
+}

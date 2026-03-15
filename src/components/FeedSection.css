@@ -1,0 +1,146 @@
+.feed-section {
+  margin-top: 24px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  background-color: var(--card-bg);
+  box-shadow: 0 16px 40px var(--shadow);
+  gap: 8px;
+}
+
+.feed-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 8px;
+  gap: 16px;
+}
+.feed-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.feed-section {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feed-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.feed-section-header {
+  margin: 0;
+  font-size: 22px;
+  color: var(--feed-text);
+}
+
+span {
+  color: var(--feed-text);
+  font-size: 20px;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-style: semibold;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.feed-subtitle {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  color: var(--feed-text);
+  font-size: 14px;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-left: 26px;
+}
+
+.number {
+  color: var(--feed-text);
+  font-size: 14px;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.feed-section-header p {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.feed-avatars {
+  display: flex;
+  align-items: center;
+  gap: -10px;
+}
+
+.feed-avatars img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--feed-bg);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .feed-section {
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .feed-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--card-border);
+    width: 100%;
+  }
+
+  .feed-section-header h2 {
+    font-size: 18px;
+  }
+
+  .feed-section-header p {
+    font-size: 13px;
+  }
+
+  .feed-avatars img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.feed-avatars img:nth-child(2) {
+  margin-left: -10px;
+}
+
+.feed-avatars img:nth-child(3) {
+  margin-left: -10px;
+}

@@ -1,38 +1,128 @@
+:root {
+  --bg-primary: #F5F6F8;
+  --bg-secondary: #ffffff;
+  --text-primary: rgba(33, 31, 38, 1);
+  --text-secondary: rgba(107, 114, 128, 1);
+  --border: #e5e7eb;
+  --accent-green: #10b981;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --sidebar-bg: #f9fafb;
+  --sidebar-active: #ffffff;
+  --sidebar-inactive: #f3f4f6;
+  --sidebar-locked: #d1d5db;
+  --header-bg: #ffffff;
+  --wrapper-bg: #ffffff;
+  --header-text: #111827;
+  --header-border: #e5e7eb;
+  --card-bg: #ffffff;
+  --card-text: #111827;
+  --card-secondary: #6b7280;
+  --feed-bg: #ffffff;
+  --feed-text: #111827;
+  --feed-secondary: #6b7280;
+  --confetti-bg: #d1fae5;
+  --confetti-text: rgba(33, 131, 88, 1);
+  --icon-bg: rgba(48, 0, 64, 0.06);
+  --icon-hover: rgba(243, 244, 246, 1);
+  --sidebar-day-inactive-bg: #e6e8ec;
+  --sidebar-day-inactive-text: rgba(4, 0, 17, 0.61);
+  --sidebar-day-active-bg: #F5F6F8;
+  --sidebar-day-active-text: #111827;
+  --sidebar-day-locked-bg: #f3f4f6;
+  --sidebar-day-locked-text: rgba(4, 0, 17, 0.61);
+  --confetti-bg-rgba: rgba(220, 252, 231, 0.7);
+  --media-overlay: rgba(0, 0, 0, 0.28);
+  --play-bg: rgba(239, 230, 254, 0.15);
+  --play-text: #ffffff;
+  --pinned-bg: rgba(220, 230, 255, 0.9);
+  --pinned-text: #1d4ed8;
+  --bell-fill: rgba(33, 31, 38, 1);
+  --header-shadow: #F2EFF3;
+  --overlay-initial: #FDFCFD;
+  --overlay-end: #F7F6FC;
+  --lock-strokewidth: 0;
+  --lock-strokecolor: transparent;
+  --card-border: rgba(234, 231, 236, 1);
+  --mobile-icon-bg: rgba(48, 0, 64, 0.06);
+}
+
+.dark {
+  --mobile-icon-bg: rgba(235, 234, 248, 0.08);
+  --card-border: rgba(43, 41, 45, 1);
+  --lock-strokecolor: rgba(255, 255, 255, 1);
+  --lock-strokewidth: 5px;
+  --overlay-initial: #121113;
+  --overlay-end: #030303;
+  --header-shadow: #232225;
+  --bg-primary: #0f0f0f;
+  --bell-fill: #ffffff;
+  --bg-secondary: #1f1f1f;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border: #374151;
+  --accent-green: #10b981;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --sidebar-bg: #0f0f0f;
+  --sidebar-active: #1f1f1f;
+  --sidebar-inactive: #2d2d2d;
+  --sidebar-locked: #4b5563;
+  --header-bg: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  --wrapper-bg: #1f1f1f;
+  --header-text: #ffffff;
+  --header-border: #374151;
+  --card-bg: #1f1f1f;
+  --card-text: #ffffff;
+  --card-secondary: #9ca3af;
+  --feed-bg: #1f1f1f;
+  --feed-text: #ffffff;
+  --feed-secondary: #9ca3af;
+  --confetti-bg: #064e3b;
+  --confetti-text: rgba(61, 214, 140, 1);
+  --icon-bg: rgba(235, 234, 248, 0.08);
+  --icon-hover: rgba(55, 65, 81, 1);
+  --sidebar-day-inactive-bg: #2d2d2d;
+  --sidebar-day-inactive-text: rgba(245, 241, 255, 0.72);
+  --sidebar-day-active-bg: #0f0f0f;
+  --sidebar-day-active-text: #ffffff;
+  --sidebar-day-locked-bg: #374151;
+  --sidebar-day-locked-text: rgba(245, 241, 255, 0.72);
+  --confetti-bg-rgba: rgba(6, 78, 59, 0.7);
+  --media-overlay: rgba(0, 0, 0, 0.5);
+  --play-bg: rgba(239, 230, 254, 0.15);
+  --play-text: #ffffff;
+  --pinned-bg: rgba(30, 58, 138, 0.9);
+  --pinned-text: #93c5fd;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: var(--bg-primary);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text-primary);
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  padding: 96px 40px 40px 320px;
+  max-width: 600px;
+  min-width: 412px;
+  margin: 60px auto 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1200px) {
+  .main-content {
+    padding-left: 280px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding: 20px;
+    padding-top: 130px;
   }
 }
